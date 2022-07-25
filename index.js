@@ -2,8 +2,9 @@ const webpush = require("web-push");
 //const fetch = require("node-fetch");
 const express = require("express");
 const https = require('https');
+const http = require('http');
 const port = process.env.PORT || 5000 ;
-const server = https.createServer();
+const server = http.createServer();
 
 
 const publicVapidKey = "BJthRQ5myDgc7OSXzPCMftGw-n16F7zQBEN7EUD6XxcfTTvrLGWSIG7y_JxiWtVlCFua0S8MTB5rPziBqNx1qIo";
