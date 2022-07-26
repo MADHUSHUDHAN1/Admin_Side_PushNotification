@@ -42,8 +42,9 @@ webpush.setVapidDetails(
        const obj = JSON.parse(data);
        for(let i in obj.user)
        {
-        const payload = JSON.stringify({title: notifiTitle,body:notifiDescription});
-    
+        const payload = JSON.stringify({title: notifiTitle,body: notifiDescription});
+        //const notification = JSON.stringify({title:notifiTitle,options:{body:notifiDescription}})
+        
         //Pass object into sendNotification
         webpush.sendNotification(obj.user[i].endpoint,payload).catch(err => console.error(err));
        //console.log(obj.user[i].endpoint);
